@@ -1,7 +1,7 @@
 module Handler.Api where
 
+import           Data.Serviette
 import           Import
-
 
 -- | Handlers
 
@@ -11,8 +11,6 @@ getApiR = do
 
 postApiR :: Handler Value
 postApiR = do
-  return $ String "Serviette - SQL JSON API"
-
-  -- sql <- requireJsonBody :: Handler SqlQuery
+  sql <- requireJsonBody :: Handler Data.Serviette.SqlQuery
   -- let sqlR = SqlResultQuery (getActionArg sql) (getSelectTableArg sql) (getJoinTableArg sql) (getWhereConditionArg sql)
-  -- return $ String $ rawSqlStr sqlR
+  return $ String $ Data.Serviette.rawSqlStr sql

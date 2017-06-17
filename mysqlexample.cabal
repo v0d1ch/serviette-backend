@@ -94,8 +94,9 @@ library
                  , case-insensitive
                  , wai
                  , mtl
+                 , serviette                     >= 0.1.0.3
 
-executable         serviette
+executable        mysqlexample 
     if flag(library-only)
         Buildable: False
 

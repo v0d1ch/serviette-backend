@@ -20,14 +20,14 @@ resolver: lts-8.15
 # User packages to be built.
 # Various formats can be used as shown in the example below.
 #
-# packages:
+packages:
 # - some-directory
 # - https://example.com/foo/bar/baz-0.0.2.tar.gz
-# - location:
-#    git: https://github.com/commercialhaskell/stack.git
-#    commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
-# - location: https://github.com/commercialhaskell/stack/commit/e7b331f14bcffb8367cd58fbfc8b40ec7642100a
-#   extra-dep: true
+  # - location:
+  #    git: git@github.com:v0d1ch/serviette.git
+  #    commit: f44a4de2c5cc91bd1e5de8c3ea733c77d1dbe48f  
+#  - location: https://github.com/v0d1ch/serviette/commit/f44a4de2c5cc91bd1e5de8c3ea733c77d1dbe48f
+    extra-dep: true
 #  subdirs:
 #  - auto-update
 #  - wai
@@ -39,7 +39,8 @@ packages:
 - '.'
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: []
+extra-deps: 
+ - serviette-0.1.0.3
 
 # Override default flag values for local packages and extra-deps
 flags: {}

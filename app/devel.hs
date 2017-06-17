@@ -1,5 +1,5 @@
 {-# LANGUAGE PackageImports #-}
-import "serviette" Application (develMain)
+import "mysqlexample" Application (develMain)
 import Prelude (IO)
 
 main :: IO ()

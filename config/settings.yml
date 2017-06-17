@@ -26,22 +26,13 @@ database_type:
   postgres
 
 database:
-# if mysql database
-  # user:     "_env:MYSQL_USER:homestead"
-  # password: "_env:MYSQL_PASSWORD:secret"
-  # host:     "_env:MYSQL_HOST:192.168.10.10"
-  # port:     "_env:MYSQL_PORT:3306"
-  # database: "_env:MYSQL_DATABASE:crm"
-  # poolsize: "_env:MYSQL_POOLSIZE:10"
+  user:     "_env:MYSQL_USER:homestead"
+  password: "_env:MYSQL_PASSWORD:secret"
+  host:     "_env:MYSQL_HOST:192.168.10.10"
+  port:     "_env:MYSQL_PORT:3306"
+  database: "_env:MYSQL_DATABASE:crm"
+  poolsize: "_env:MYSQL_POOLSIZE:10"
 
-# if postgres database
-  user:     "_env:PGUSER:yesod"
-  password: "_env:PGPASS: 8888_haskel_serbia"
-  host:     "_env:PGHOST:localhost"
-  port:     "_env:PGPORT:5432"
-  # See config/test-settings.yml for an override during tests
-  database: "_env:PGDATABASE:haskell_serbia"
-  poolsize: "_env:PGPOOLSIZE:10"
 
 
 copyright: Sasa Bogicevic

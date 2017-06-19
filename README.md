@@ -1,5 +1,5 @@
-# SERVIETTE - Yesod Mysql example 
-  [Serviette](https://hackage.haskell.org/package/serviette) is library for generating SQL queries from JSON. 
+# SERVIETTE Backend  
+  [Serviette](https://hackage.haskell.org/package/serviette) is library for generating SQL queries from JSON. This repo is the backend for database interactions.
   Send the json in the expected format and receive raw sql string.
 
 ### Expected JSON format

@@ -1,7 +1,11 @@
+{-# Language OverloadedStrings #-}
 module Handler.Api where
 
 import           Data.Serviette
 import           Import
+import           Data.Aeson
+
+
 
 -- | Handlers
 
@@ -12,5 +16,7 @@ getApiR = do
 postApiR :: Handler Value
 postApiR = do
   sql <- requireJsonBody :: Handler Data.Serviette.SqlQuery
-  -- let sqlR = SqlResultQuery (getActionArg sql) (getSelectTableArg sql) (getJoinTableArg sql) (getWhereConditionArg sql)
-  return $ String $ Data.Serviette.rawSqlStr sql
+  liftIO $ print $  Data.Serviette.rawSqlStr sql
+  case eitherDecode $  Data.Serviette.rawSqlStr sql of
+    Right x -> return $ String x
+    Left x -> return $ String $ pack x

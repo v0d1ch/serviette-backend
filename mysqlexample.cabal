@@ -94,7 +94,7 @@ library
                  , case-insensitive
                  , wai
                  , mtl
-                 , serviette                     >= 0.1.0.3
+                 , serviette                     >= 0.1.0.6
 
 executable        mysqlexample 
     if flag(library-only)
